@@ -583,7 +583,6 @@ GameObject:
   - component: {fileID: 54738205939082486}
   - component: {fileID: 136872997043188288}
   - component: {fileID: 195946467274171504}
-  - component: {fileID: 114548448661005728}
   - component: {fileID: 114368056641538680}
   - component: {fileID: 114226347787241524}
   - component: {fileID: 114490263823653708}
@@ -2635,20 +2634,6 @@ MonoBehaviour:
   hoverCircle: {fileID: 0}
   selectionCircle: {fileID: 0}
   unitClassName: 
---- !u!114 &114548448661005728
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1600595769975958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceae718fded776b4f90f377e63976f1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeplacementFlag: 0
-  unit: {fileID: 1600595769975958}
-  selected: 0
 --- !u!114 &114623219131674356
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿// Selection d'unite Syteme de base de chaque RTS
+// Par Nguyen Hoai Nguyen (12-11-2018), Modifie sur le code de base de Jeff Zimmer
+// https://hyunkell.com/blog/rts-style-unit-selection-in-unity-5/
+
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,15 +11,17 @@ using UnityEngine.UI;
 
 public class SelectionUnit : MonoBehaviour
 {
+    [Header("Declaration pour le systeme de selection")]
     bool isSelecting = false;
     float newScale = 0.3f;
     Projector leProjecteur;
     Vector3 mousePosition1;
 
-    //public GameObject formation;
+    [Header("Prefab cercle selected")]
     public GameObject selectionCirclePrefab;
     public GameObject hoverCirclePrefab;
-    
+
+    [Header("Bouton du UI")]
     public Button btnSelectionChevalier;
     public Button btnSelectionArcher;
     public Button btnSelectionLancier;
@@ -48,7 +54,7 @@ public class SelectionUnit : MonoBehaviour
 
         GestionSelectionKey();
 
-        ////////////////////////////////////////////////////////////
+        // Cle visuel pour le joueur pour selection d'un unite
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hitInfo;
@@ -61,6 +67,7 @@ public class SelectionUnit : MonoBehaviour
                 {
                     if (selectableObject.hoverCircle == null)
                     {
+                        //Instancier le cercle prefab sur le personnage
                         selectableObject.hoverCircle = Instantiate(hoverCirclePrefab);
                         selectableObject.hoverCircle.transform.SetParent(selectableObject.transform, false);
                         selectableObject.hoverCircle.transform.eulerAngles = new Vector3(90, 0, 0);
@@ -80,6 +87,7 @@ public class SelectionUnit : MonoBehaviour
             }
         }
 
+        // Selection du personnage lorsqu'on click dessus
         if (Input.GetMouseButtonUp(0))
         {
             Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -91,12 +99,15 @@ public class SelectionUnit : MonoBehaviour
                 if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Unit"))
                 {
                     var selectedObjects = new List<SelectableUnit>();
+
                     foreach (var selectableObject in FindObjectsOfType<SelectableUnit>())
                     {
                         if (selectableObject.selectionCircle == null && selectableObject.hoverCircle != null)
                         {
+                            // Detruire le place holder
                             Destroy(selectableObject.hoverCircle);
                             selectableObject.hoverCircle = null;
+                            //Instancier le cercle prefab sur le personnage
                             selectableObject.selectionCircle = Instantiate(selectionCirclePrefab);
                             selectableObject.selectionCircle.transform.SetParent(selectableObject.transform, false);
                             selectableObject.selectionCircle.transform.eulerAngles = new Vector3(90, 0, 0);

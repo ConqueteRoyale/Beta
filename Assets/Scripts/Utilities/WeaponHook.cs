@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// Script pour ouvrir et fermer le damage collider, controler par keyframe dans les animations
+// Par Nguyen Hoai Nguyen (01-10-2018)
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,22 +1,22 @@
-﻿using System.Collections;
+﻿//Script pour gerer la vie de l'unite et l'attaque
+//Par Nguyen Hoai Nguyen (12-11-2018)
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterManager : MonoBehaviour {
 
+    [Header ("Component pour l'unite")]
     public Animator anim;
     public GameObject unit;
 
+    [Header("Statisque")]
     public float health = 3;
     public float amount = 1;
     public bool isDead = false;
     
-
-    // Use this for initialization
-    void Start () {
-
-	}
-
+    //Detection de l'attaque de l'ennemi
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("DamageCollider"))
@@ -27,6 +27,7 @@ public class CharacterManager : MonoBehaviour {
             if (health < 0)
                 health = 0;
 
+            //Si vie est egale a 0 => joue animation de mort et disparition et update le compteur
             if (health <= 0)
             {
                 if (!isDead)
