@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//2018-11-09
+//Kevin Langlois
+//Script qui contrôle les statistiques affichées à l'écran de fin de jeu
 
 public class FinDeJeuManager : MonoBehaviour {
 

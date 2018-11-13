@@ -12,6 +12,7 @@ public class MenuPrincipal : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //Permet de quitter l'application 
     public void QuitterJeu()
     {
         Debug.Log("Quitter");

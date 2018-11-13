@@ -1,5 +1,6 @@
 ﻿// Selection d'unite Syteme de base de chaque RTS
 // Par Nguyen Hoai Nguyen (12-11-2018), Modifie sur le code de base de Jeff Zimmer
+//Kevin Langlois Sélection des unités à l'aide de UI
 // https://hyunkell.com/blog/rts-style-unit-selection-in-unity-5/
 
 using UnityEngine;
@@ -34,7 +35,7 @@ public class SelectionUnit : MonoBehaviour
     private KeyCode selectTous = KeyCode.Alpha8;
 
 
-
+    //Kevin Langlois Les boutons du UI permettent de faire la sélection des différents unités par types
     private void Start()
     {
         //Button btn5 = btnSelectionArcher.GetComponent<Button>();
@@ -218,7 +219,7 @@ public class SelectionUnit : MonoBehaviour
             Utils.DrawScreenRectBorder(rect, 2, new Color(0.8f, 0.8f, 0.95f));
         }
     }
-
+    //Kevin Langlois Permet la sélection des différents unités à l'aide des touches alphanumérique 6 7 8 9
     private void GestionSelectionKey()
     {
         if (Input.GetKeyDown(selectArcher))
@@ -318,7 +319,7 @@ public class SelectionUnit : MonoBehaviour
         }
 
     }
-
+    //Kevin Langlois Permet la sélection des différents unités à l'aide des boutons présents sur le UI
     private void GestionSelectionUnitBtn(string type)
     {
         //Chevalier
