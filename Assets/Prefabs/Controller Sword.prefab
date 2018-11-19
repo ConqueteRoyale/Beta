@@ -374,8 +374,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4599091094192434}
-  - component: {fileID: 114624220960170430}
-  - component: {fileID: 114328839659058594}
   m_Layer: 11
   m_Name: Controller Sword
   m_TagString: Untagged
@@ -589,9 +587,7 @@ GameObject:
   - component: {fileID: 114490263823653708}
   - component: {fileID: 114238953643874006}
   - component: {fileID: 114394275476391554}
-  - component: {fileID: 114691907186674896}
   - component: {fileID: 114005248627398204}
-  - component: {fileID: 114623219131674356}
   - component: {fileID: 114319082976786522}
   m_Layer: 11
   m_Name: Character_Knight_02_Yellow (2)
@@ -2589,20 +2585,6 @@ MonoBehaviour:
   DeplacementFlag: 0
   unit: {fileID: 1390061315720660}
   selected: 0
---- !u!114 &114328839659058594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390061315720660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cefedfdf7e7224d40915d5d5298f8f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeplacementFlag: 0
-  unit: {fileID: 0}
-  selected: 0
 --- !u!114 &114368056641538680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2633,10 +2615,11 @@ MonoBehaviour:
   targetsAura: []
   isLockOn: 0
   isNearMe: 0
-  agentNav: {fileID: 0}
+  agentNav: {fileID: 195946467274171504}
   index: 1
   speedTarget: 1
   speedRot: {x: 50, y: 0, z: 0}
+  moveSpeed: 0.7
 --- !u!114 &114394275476391554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2664,91 +2647,6 @@ MonoBehaviour:
   hoverCircle: {fileID: 0}
   selectionCircle: {fileID: 0}
   unitClassName: 
---- !u!114 &114623219131674356
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1600595769975958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
---- !u!114 &114624220960170430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390061315720660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 41
-    i1: 133
-    i2: 81
-    i3: 232
-    i4: 17
-    i5: 69
-    i6: 208
-    i7: 68
-    i8: 90
-    i9: 225
-    i10: 166
-    i11: 216
-    i12: 77
-    i13: 3
-    i14: 110
-    i15: 194
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114691907186674896
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1600595769975958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 41
-    i1: 133
-    i2: 81
-    i3: 232
-    i4: 17
-    i5: 69
-    i6: 208
-    i7: 68
-    i8: 90
-    i9: 225
-    i10: 166
-    i11: 216
-    i12: 77
-    i13: 3
-    i14: 110
-    i15: 194
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!136 &136872997043188288
 CapsuleCollider:
   m_ObjectHideFlags: 1

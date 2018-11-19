@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 685294cdc12929743b4a5296be5ffe71
   - enabled: 1
-    path: Assets/Scenes/Scene_EnJeu_ulysse.unity
-    guid: 4b5627dac0b015e4c8907d90ec02f33c
-  - enabled: 1
     path: Assets/Scenes/Scene_EnJeu.unity
     guid: 19e45ed0aaa3a4676852906cc8d07a63
+  - enabled: 1
+    path: Assets/Scenes/Scene_EnJeu_ulysse.unity
+    guid: 4b5627dac0b015e4c8907d90ec02f33c
   - enabled: 1
     path: Assets/Scenes/Scene_FinJeu.unity
     guid: 6ed2d78cb63914e4cb59314f272bfa71

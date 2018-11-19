@@ -90,8 +90,6 @@ GameObject:
   - component: {fileID: 114979672550638000}
   - component: {fileID: 114580244319706278}
   - component: {fileID: 114043045193243346}
-  - component: {fileID: 114578266894290842}
-  - component: {fileID: 114024661617793158}
   m_Layer: 0
   m_Name: Character_Knight_03_Yellow
   m_TagString: Untagged
@@ -613,7 +611,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4954450108933722}
-  - component: {fileID: 114293403506583234}
   m_Layer: 0
   m_Name: Controller Spear
   m_TagString: Untagged
@@ -2531,27 +2528,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114024661617793158
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1044019498938022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114043045193243346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2593,70 +2569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 195456819599078322}
   animator: {fileID: 95905908044750730}
---- !u!114 &114293403506583234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1599440999661408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 9
-    i1: 171
-    i2: 91
-    i3: 26
-    i4: 19
-    i5: 149
-    i6: 239
-    i7: 84
-    i8: 232
-    i9: 167
-    i10: 109
-    i11: 68
-    i12: 223
-    i13: 226
-    i14: 170
-    i15: 250
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114578266894290842
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1044019498938022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 9
-    i1: 171
-    i2: 91
-    i3: 26
-    i4: 19
-    i5: 149
-    i6: 239
-    i7: 84
-    i8: 232
-    i9: 167
-    i10: 109
-    i11: 68
-    i12: 223
-    i13: 226
-    i14: 170
-    i15: 250
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!114 &114580244319706278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2691,6 +2603,7 @@ MonoBehaviour:
   index: 1
   speedTarget: 1
   speedRot: {x: 50, y: 0, z: 0}
+  moveSpeed: 0.7
 --- !u!114 &114918445524191286
 MonoBehaviour:
   m_ObjectHideFlags: 1

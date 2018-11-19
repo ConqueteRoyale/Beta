@@ -345,7 +345,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4604735408787898}
-  - component: {fileID: 114179924832684098}
   m_Layer: 0
   m_Name: Controller Archer
   m_TagString: Untagged
@@ -2302,38 +2301,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114179924832684098
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1352319076498606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 226
-    i1: 212
-    i2: 222
-    i3: 103
-    i4: 145
-    i5: 171
-    i6: 235
-    i7: 4
-    i8: 122
-    i9: 154
-    i10: 154
-    i11: 36
-    i12: 133
-    i13: 251
-    i14: 53
-    i15: 227
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!114 &114600073354423582
 MonoBehaviour:
   m_ObjectHideFlags: 1

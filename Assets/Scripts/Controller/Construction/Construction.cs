@@ -7,6 +7,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class Construction : MonoBehaviour
 {
@@ -263,7 +264,7 @@ public class Construction : MonoBehaviour
 
 
 
-    // GESTION DE LA CONSTRUCTION DES BÂTIMENTS 
+    // GESTION DE LA CONSTRUCTION DES BÂTIMENTS
     IEnumerator GestionConstruction(GameObject objet)
     {
         // On active différents éléments du gameobject

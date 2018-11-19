@@ -5,9 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Networking;
 
-public class PlayerController : NetworkBehaviour {
+public class PlayerController : MonoBehaviour {
 
     NavMeshAgent agentNav;
     public bool DeplacementFlag = false;
@@ -28,18 +27,11 @@ public class PlayerController : NetworkBehaviour {
         //Debug.Log(Mathf.Abs(agentNav.velocity.sqrMagnitude));
 
         // test pour l'instant, voir readme
-        CmdDeplacementUnite();
+        DeplacementUnite();
     }
 
-    [Command]
-    public void CmdDeplacementUnite(){
+    public void DeplacementUnite(){
 
-
-        if(hasAuthority == false){
-
-            return;
-
-        }
         if (unit == null)
         {
             return;
@@ -59,7 +51,7 @@ public class PlayerController : NetworkBehaviour {
             {
                 if(Mathf.Abs(agentNav.velocity.sqrMagnitude) < 0.8f)
                 {
-                    CmdArreterUnite();
+                    ArreterUnite();
                 }
 
 
@@ -69,15 +61,14 @@ public class PlayerController : NetworkBehaviour {
                     if (!agentNav.hasPath || Mathf.Abs(agentNav.velocity.sqrMagnitude) < float.Epsilon)
                     {
 
-                        CmdArreterUnite();
+                        ArreterUnite();
                     }
                 }
             }
         }
     }
 
-    [Command]
-    public void CmdArreterUnite(){
+    public void ArreterUnite(){
         agentNav.isStopped = true;
     } 
 }
