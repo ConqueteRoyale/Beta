@@ -44,6 +44,7 @@ public class FieldOfView : MonoBehaviour {
     public int index = 1;
     public float speedTarget = 1f;
     public Vector3 speedRot = Vector3.right * 50f;
+    public float moveSpeed = 0.7f;
 
     //Trouver les targets dans le cercle de FOV
     void Start()
@@ -134,8 +135,9 @@ public class FieldOfView : MonoBehaviour {
 
     public void Update()
     {
+
         //Si dans le rayon d'attaque => attaque
-        if(isLockOn == true)
+        if (isLockOn == true)
         {
             Quaternion targetRotation = Quaternion.LookRotation(targets[0].transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
@@ -143,10 +145,8 @@ public class FieldOfView : MonoBehaviour {
 
         //Si dans le rayon de vue => cours vers lui
         if (isNearMe == true && isLockOn == false)
-        {   
-            agentNav.ResetPath();
-            agentNav.SetDestination(targetsAura[0].transform.position);
-            isNearMe = false;
+        {
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
     }
 
