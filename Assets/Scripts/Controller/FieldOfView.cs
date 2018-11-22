@@ -11,7 +11,7 @@ public class FieldOfView : MonoBehaviour {
     [Header("Component pour l'unite")]
     public Animator anim;
     public GameObject unit;
-    public float speed = 8f;
+    Transform myTransform;
 
     [Header("Variable pour le FOV")]
     public float viewRadius;
@@ -45,23 +45,17 @@ public class FieldOfView : MonoBehaviour {
     public float speedTarget = 1f;
     public Vector3 speedRot = Vector3.right * 50f;
     public float moveSpeed = 0.7f;
+    public float rotationSpeed = 10f;
+    public bool canMove = true;
+
+    public GameObject AI_Target;
 
     //Trouver les targets dans le cercle de FOV
     void Start()
     {
-        StartCoroutine("FindTargetsWithDelay", 0.2f);
+        myTransform = GetComponent<Transform>();
         targets = new List<Transform>();
-    }
-
-    //Routine pour appeler les autres fonction
-    IEnumerator FindTargetsWithDelay(float delay)
-    {
-        while(true)
-        {
-            yield return new WaitForSeconds(delay);
-            FindTargetsNearMe();
-            FindVisibleTargets();
-        }
+        targetsAura = new List<Transform>();
     }
 
     //Dessiner 2 cercle autour du personnage et detecter les ennemis dans les deux cercles (PLUS PETIT CERCLE POUR ATTAQUER AUTOMATIQUEMENT ET FOLLOW TARGET)
@@ -124,7 +118,7 @@ public class FieldOfView : MonoBehaviour {
             Transform targetAura = targetNear[i].transform;
             Vector3 dirToTarget = (targetAura.position - transform.position).normalized;
 
-            if(Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
+            if(Vector3.Angle(transform.forward, dirToTarget) < viewAngleAura / 2)
             {
                 AddAllEnemies();
                 isNearMe = true;
@@ -135,18 +129,42 @@ public class FieldOfView : MonoBehaviour {
 
     public void Update()
     {
+        FindTargetsNearMe();
+        FindVisibleTargets();
 
-        //Si dans le rayon d'attaque => attaque
-        if (isLockOn == true)
+        if (isNearMe == true)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(targets[0].transform.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+            AI_Target = targetsAura[0].gameObject;
+        }
+        else
+        {
+            AI_Target = null;
         }
 
-        //Si dans le rayon de vue => cours vers lui
-        if (isNearMe == true && isLockOn == false)
+
+
+        if (AI_Target != null && canMove == true)
         {
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(AI_Target.transform.position - myTransform.position), rotationSpeed * Time.deltaTime);
+            myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Entered zone");
+            canMove = false;
+            
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy" && isLockOn == false)
+        {
+            canMove = true;
         }
     }
 
