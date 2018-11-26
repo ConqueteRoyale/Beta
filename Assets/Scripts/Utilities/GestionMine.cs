@@ -14,7 +14,7 @@ public class GestionMine : MonoBehaviour {
 	IEnumerator ActiverMine() {
         yield return new WaitForSeconds(10f);
 		
-		VariablesGlobales.revenuOr_joueur_01 += 5;
+		VariablesGlobales.revenuOr_joueur_01 += 20;
 	}
 }
 

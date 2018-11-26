@@ -14,23 +14,17 @@ public static class VariablesGlobales {
       public static int effectifTotal_joueur_03 = 0; 
       public static int effectifTotal_joueur_04 = 0;
 
-	  // Les revenus par seconde des joueurs
+	  // Les revenus par seconde du joueur
       public static float revenuOr_joueur_01 = 5; 
-      public static float revenuOr_joueur_02 = 5; 
-      public static float revenuOr_joueur_03 = 5; 
-      public static float revenuOr_joueur_04 = 5;
-	 
-        // Les revenus bonus par seconde des joueurs
-      public static float revenuOrBonus_joueur_01 = 0; 
-      public static float revenuOrBonus_joueur_02 = 0; 
-      public static float revenuOrBonus_joueur_03 = 0; 
-      public static float revenuOrBonus_joueur_04 = 0;
 
-	  // Les banques (or total) des joueurs
-      public static float banqueOr_joueur_01 = 300; 
-      public static float banqueOr_joueur_02 = 300; 
-      public static float banqueOr_joueur_03 = 300; 
-      public static float banqueOr_joueur_04 = 300;
+	 
+        // Les revenus bonus par seconde du joueur
+      public static float revenuOrBonus_joueur_01 = 0; 
+
+
+	  // Les banques (or total) du joueur
+      public static float banqueOr_joueur_01 = 30000; 
+
 
 	  // Les quantités d'or accumulé par les joueurs depuis le début de la partie
       public static float orTotalPartie_joueur_01 = 0; 

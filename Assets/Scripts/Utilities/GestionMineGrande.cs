@@ -13,7 +13,7 @@ public class GestionMineGrande : MonoBehaviour {
 	}
 	IEnumerator ActiverMine() {
         yield return new WaitForSeconds(1f);
-		 VariablesGlobales.revenuOrBonus_joueur_01 += 10;
+		 VariablesGlobales.revenuOrBonus_joueur_01 += 15;
 
 	}
 }
