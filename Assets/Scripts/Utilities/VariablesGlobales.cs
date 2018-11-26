@@ -31,4 +31,9 @@ public static class VariablesGlobales {
       public static float orTotalPartie_joueur_02 = 0; 
       public static float orTotalPartie_joueur_03 = 0; 
       public static float orTotalPartie_joueur_04 = 0;
+    
+      // Liste des prix des batiments
+      public static int[] prixBatiments = new int[10];
+
+
 }

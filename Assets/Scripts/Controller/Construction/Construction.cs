@@ -34,6 +34,7 @@ public class Construction : MonoBehaviour
 
     // Le bâtiment en train d'être placé
     private GameObject currentPlaceableObject;
+    private int idBatiment;
 
     // Le son de construction lorsqu'on place un bâtiment
     public AudioClip clipSonConstruction;
@@ -82,6 +83,13 @@ public class Construction : MonoBehaviour
         {
             currentPlaceableObject.GetComponent<Outline>().OutlineColor = Color.red;
         }
+        
+         if (Input.GetMouseButtonDown(1)){    
+                if (currentPlaceableObject != null)
+                {
+                    Destroy(currentPlaceableObject);
+                }
+        }
     }
 
 
@@ -100,6 +108,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(minePrefab);
+                idBatiment = 0;
             }
         }
 
@@ -115,6 +124,8 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(mineGrandePrefab);
+                idBatiment = 1;
+
             }
         }
 
@@ -128,6 +139,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(caserneLancierPrefab);
+                idBatiment = 2;
             }
         }
 
@@ -141,6 +153,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(caserneChevalierPrefab);
+                idBatiment = 3;
             }
         }
 
@@ -154,6 +167,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(caserneArcherPrefab);
+                idBatiment = 4;
             }
         }
 
@@ -173,6 +187,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(minePrefab);
+                idBatiment = 0;
             }
         }
 
@@ -186,6 +201,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(mineGrandePrefab);
+                idBatiment = 1;
             }
         }
 
@@ -199,6 +215,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(caserneLancierPrefab);
+                idBatiment = 2;
             }
         }
 
@@ -213,6 +230,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(caserneChevalierPrefab);
+                idBatiment = 3;
             }
         }
 
@@ -226,6 +244,7 @@ public class Construction : MonoBehaviour
             else
             {
                 currentPlaceableObject = Instantiate(caserneArcherPrefab);
+                idBatiment = 4;
             }
         }          
     }
@@ -256,8 +275,17 @@ public class Construction : MonoBehaviour
         // Si on fait un clic gauche et que le bâtiment est dans une zone constructible, on le construit
         if (Input.GetMouseButtonDown(0) && isPlaceable == true)
         {
+            Debug.Log(VariablesGlobales.banqueOr_joueur_01);
+            Debug.Log(idBatiment);
+            Debug.Log(VariablesGlobales.prixBatiments[idBatiment]);
+            if (VariablesGlobales.banqueOr_joueur_01 < VariablesGlobales.prixBatiments[idBatiment]) {
+                Debug.Log("Pas assez d'argent!");
+            }
+            else {
+                VariablesGlobales.banqueOr_joueur_01 -= VariablesGlobales.prixBatiments[idBatiment];
                 StartCoroutine(GestionConstruction(currentPlaceableObject));
-                currentPlaceableObject = null;
+                currentPlaceableObject = null;       
+            }
                 
         }
     }

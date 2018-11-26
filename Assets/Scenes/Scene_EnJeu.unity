@@ -742,7 +742,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- 50 or'
+  m_Text: '- 1500 or'
 --- !u!222 &85356865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CASERNE D'ARCHERS
+  m_Text: "CAVERNE DE G\xC9ANTS"
 --- !u!222 &158637099
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2248,7 +2248,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- 50 or'
+  m_Text: '- 1700 or'
 --- !u!222 &560820805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3035,7 +3035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- 50 or'
+  m_Text: '- 1500 or'
 --- !u!222 &857056192
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4035,7 +4035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.089966, y: -332.6}
+  m_AnchoredPosition: {x: -69, y: -332.6}
   m_SizeDelta: {x: 10.76, y: 13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173330157
@@ -4263,7 +4263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: + 1 archer / 10 secondes
+  m_Text: "+ 1 g\xE9ant / 10 secondes"
 --- !u!222 &1239139408
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5127,7 +5127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210.03003, y: -334.1}
+  m_AnchoredPosition: {x: 223.9, y: -334.1}
   m_SizeDelta: {x: 12, y: 13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389995207
@@ -6085,7 +6085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.089966, y: -412}
+  m_AnchoredPosition: {x: -67.8, y: -412}
   m_SizeDelta: {x: 10.76, y: 13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691809936
@@ -6194,7 +6194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- 50 or'
+  m_Text: '- 1500 or'
 --- !u!222 &1735648853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6435,7 +6435,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- 50 or'
+  m_Text: '- 7500 or'
 --- !u!222 &1808291512
 CanvasRenderer:
   m_ObjectHideFlags: 0
