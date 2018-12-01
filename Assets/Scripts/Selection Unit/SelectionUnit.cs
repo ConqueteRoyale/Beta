@@ -88,44 +88,6 @@ public class SelectionUnit : MonoBehaviour
             }
         }
 
-        // Selection du personnage lorsqu'on click dessus
-        if (Input.GetMouseButtonUp(0))
-        {
-            Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray2, out hit, Mathf.Infinity))
-            {
-                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Unit"))
-                {
-                    var selectedObjects = new List<SelectableUnit>();
-
-                    foreach (var selectableObject in FindObjectsOfType<SelectableUnit>())
-                    {
-                        if (selectableObject.selectionCircle == null && selectableObject.hoverCircle != null)
-                        {
-                            // Detruire le place holder
-                            Destroy(selectableObject.hoverCircle);
-                            selectableObject.hoverCircle = null;
-                            //Instancier le cercle prefab sur le personnage
-                            selectableObject.selectionCircle = Instantiate(selectionCirclePrefab);
-                            selectableObject.selectionCircle.transform.SetParent(selectableObject.transform, false);
-                            selectableObject.selectionCircle.transform.eulerAngles = new Vector3(90, 0, 0);
-
-                            // Associé un tag Friendly au personnage sélectionné
-                            selectableObject.transform.tag = "Friendly";
-
-
-                            // Change la grosseur du cercle
-                            leProjecteur = selectableObject.selectionCircle.GetComponent<Projector>();
-                            leProjecteur.orthographicSize = newScale;
-                        }
-                    }
-                }
-            }
-        }
-
         // If we press the left mouse button, begin selection and remember the location of the mouse
         if (Input.GetMouseButtonDown(0))
         {

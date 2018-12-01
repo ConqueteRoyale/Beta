@@ -7,15 +7,20 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour {
 
-    [Header ("Component pour l'unite")]
-    public Animator anim;
-    public GameObject unit;
+    Animator anim;
+    GameObject unit;
 
     [Header("Statisque")]
     public float health = 3;
     public float amount = 1;
     public bool isDead = false;
-    
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+        unit = GetComponent<GameObject>();
+    }
+
     //Detection de l'attaque de l'ennemi
     public void OnTriggerEnter(Collider other)
     {

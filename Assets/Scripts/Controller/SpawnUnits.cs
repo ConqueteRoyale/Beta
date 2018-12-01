@@ -11,7 +11,6 @@ public class SpawnUnits : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
         // La fonction se repete a chaque 5 secondes et l'on instantie une nouvelle unite
         InvokeRepeating("spawnUnite", DelaiSpawn, spawnTime);
     }

@@ -12,13 +12,14 @@ namespace ConqueteRoyale
     {
         const float locomationAnimationSmoothTime = 0.1f;
 
-        public NavMeshAgent agent;
-        public Animator animator;
+        NavMeshAgent agent;
+        Animator animator;
 
-        // Use this for initialization
+        // Use this for initializationS
         void Start()
         {
-
+            agent = GetComponent<NavMeshAgent>();
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame

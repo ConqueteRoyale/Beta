@@ -43,6 +43,9 @@ public class Construction : MonoBehaviour
     // Bool indiquant si le bâtiment est constructible ou pas
     public bool isPlaceable;
 
+    //
+    public PlayerSetupDefinition Info;
+
 
     // Au début de la partie, on ajoute des détecteurs de clics au boutons de l'UI
     private void Start() {
@@ -296,6 +299,7 @@ public class Construction : MonoBehaviour
     IEnumerator GestionConstruction(GameObject objet)
     {
         // On active différents éléments du gameobject
+        objet.AddComponent<Player>().Info = Info;
         objet.GetComponent<Collider>().enabled = true;
         objet.gameObject.GetComponent<Outline>().enabled = false;
         // La construction du bâtiment est COMMENCÉE
