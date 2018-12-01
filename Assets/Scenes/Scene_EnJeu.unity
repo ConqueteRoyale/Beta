@@ -988,7 +988,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32260345
 GameObject:
@@ -6081,7 +6081,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186918455
 GameObject:
@@ -6970,7 +6970,7 @@ RectTransform:
   - {fileID: 1436997087}
   - {fileID: 326864688}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8470,6 +8470,8 @@ GameObject:
   m_Component:
   - component: {fileID: 266366323}
   - component: {fileID: 266366324}
+  - component: {fileID: 266366326}
+  - component: {fileID: 266366325}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -8488,7 +8490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &266366324
 MonoBehaviour:
@@ -8515,6 +8517,136 @@ MonoBehaviour:
     StartingUnits:
     - {fileID: 1336233752851366, guid: 0a39cb4863861894e88d02e9ecf460db, type: 2}
     isAi: 1
+    Credits: 0
+--- !u!82 &266366325
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266366322}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &266366326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266366322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766c89ada7cb685419fb67e053351fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnConstruireMine: {fileID: 1736090622}
+  btnConstruireMineGrande: {fileID: 1451534779}
+  btnConstruireCaserneLancier: {fileID: 1854770344}
+  btnConstruireCaserneChevalier: {fileID: 1842245450}
+  btnConstruireCaserneArcher: {fileID: 1055630478}
+  minePrefab: {fileID: 1816734515409066, guid: c854e568371f1dc4f810047f001da41e, type: 2}
+  mineGrandePrefab: {fileID: 1816734515409066, guid: 297e183dd8981f44ea192f691b6f46e4,
+    type: 2}
+  caserneLancierPrefab: {fileID: 1215249492892470, guid: 6cccd37f7813d0148958391debfc31be,
+    type: 2}
+  caserneChevalierPrefab: {fileID: 1107457695472942, guid: f52ff8f1af77a934d9230b468dd9766f,
+    type: 2}
+  caserneArcherPrefab: {fileID: 1808380437370524, guid: d091db24566df6240b63ef03640a275a,
+    type: 2}
+  clipSonConstruction: {fileID: 8300000, guid: 82ab3bba2624c074d8aa0ed712f610b7, type: 3}
+  sonConstruction: {fileID: 1126309377}
+  isPlaceable: 0
+  Info:
+    Name: 
+    Location: {fileID: 0}
+    AccentColor: {r: 0, g: 0, b: 0, a: 0}
+    StartingUnits: []
+    isAi: 0
     Credits: 0
 --- !u!1 &266591880
 GameObject:
@@ -20496,7 +20628,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &731303993
 GameObject:
@@ -25094,166 +25226,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892108799}
   m_Mesh: {fileID: 4300000, guid: 9f72dbdd872c0214abfff67ac39bc031, type: 3}
---- !u!1 &899052695
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 899052697}
-  - component: {fileID: 899052696}
-  - component: {fileID: 899052698}
-  m_Layer: 0
-  m_Name: Constructeur
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &899052696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 899052695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766c89ada7cb685419fb67e053351fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btnConstruireMine: {fileID: 1736090622}
-  btnConstruireMineGrande: {fileID: 1451534779}
-  btnConstruireCaserneLancier: {fileID: 1854770344}
-  btnConstruireCaserneChevalier: {fileID: 1842245450}
-  btnConstruireCaserneArcher: {fileID: 1055630478}
-  minePrefab: {fileID: 1816734515409066, guid: c854e568371f1dc4f810047f001da41e, type: 2}
-  mineGrandePrefab: {fileID: 1816734515409066, guid: 297e183dd8981f44ea192f691b6f46e4,
-    type: 2}
-  caserneLancierPrefab: {fileID: 1215249492892470, guid: 6cccd37f7813d0148958391debfc31be,
-    type: 2}
-  caserneChevalierPrefab: {fileID: 1107457695472942, guid: f52ff8f1af77a934d9230b468dd9766f,
-    type: 2}
-  caserneArcherPrefab: {fileID: 1808380437370524, guid: d091db24566df6240b63ef03640a275a,
-    type: 2}
-  clipSonConstruction: {fileID: 8300000, guid: 82ab3bba2624c074d8aa0ed712f610b7, type: 3}
-  sonConstruction: {fileID: 1126309377}
-  isPlaceable: 0
-  Info:
-    Name: 
-    Location: {fileID: 0}
-    AccentColor: {r: 0, g: 0, b: 0, a: 0}
-    StartingUnits: []
-    isAi: 0
-    Credits: 0
---- !u!4 &899052697
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 899052695}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &899052698
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 899052695}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &902089312
 GameObject:
   m_ObjectHideFlags: 0
@@ -32037,7 +32009,7 @@ Transform:
   m_LocalScale: {x: 1.1423229, y: 1.1423229, z: 1.1423229}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1127770920
 GameObject:
@@ -36788,7 +36760,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306905700
 GameObject:
@@ -37567,7 +37539,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1335099737
 GameObject:
@@ -52011,7 +51983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1884957944
 GameObject:
