@@ -35,13 +35,25 @@ public class RTSManager : MonoBehaviour {
                 {
                     if (Player.Default == null) Player.Default = p;
                 }
-                
             }
+
+            
         } 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        foreach (var p in Players)
+        {
+            foreach (var a in p.ActiveUnits)
+            {
+                if ((a.GetComponent<Player>() == null))
+                {
+                    Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+                    var go = a.AddComponent<Player>();
+                    Debug.Log(go);
+                }
+            }
+        }
 	}
 }

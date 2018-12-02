@@ -8508,14 +8508,16 @@ MonoBehaviour:
     Location: {fileID: 1881335517}
     AccentColor: {r: 1, g: 0, b: 0, a: 1}
     StartingUnits:
-    - {fileID: 1336233752851366, guid: 0a39cb4863861894e88d02e9ecf460db, type: 2}
+    - {fileID: 1443386398383000, guid: 214f2e0030de15049b252916ce07f848, type: 2}
+    activeUnits: []
     isAi: 0
     Credits: 0
   - Name: Player 2
     Location: {fileID: 31458758}
     AccentColor: {r: 0, g: 0, b: 1, a: 1}
     StartingUnits:
-    - {fileID: 1336233752851366, guid: 0a39cb4863861894e88d02e9ecf460db, type: 2}
+    - {fileID: 1443386398383000, guid: 214f2e0030de15049b252916ce07f848, type: 2}
+    activeUnits: []
     isAi: 1
     Credits: 0
 --- !u!82 &266366325
@@ -8641,13 +8643,6 @@ MonoBehaviour:
   clipSonConstruction: {fileID: 8300000, guid: 82ab3bba2624c074d8aa0ed712f610b7, type: 3}
   sonConstruction: {fileID: 1126309377}
   isPlaceable: 0
-  Info:
-    Name: 
-    Location: {fileID: 0}
-    AccentColor: {r: 0, g: 0, b: 0, a: 0}
-    StartingUnits: []
-    isAi: 0
-    Credits: 0
 --- !u!1 &266591880
 GameObject:
   m_ObjectHideFlags: 0

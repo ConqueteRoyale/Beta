@@ -44,7 +44,7 @@ public class Construction : MonoBehaviour
     public bool isPlaceable;
 
     //
-    public PlayerSetupDefinition Info;
+    RTSManager manager;
 
 
     // Au début de la partie, on ajoute des détecteurs de clics au boutons de l'UI
@@ -60,6 +60,8 @@ public class Construction : MonoBehaviour
         btn3.onClick.AddListener(delegate {GestionNouveauBatimentBtn("lancier"); });
         btn4.onClick.AddListener(delegate {GestionNouveauBatimentBtn("chevalier"); });
         btn5.onClick.AddListener(delegate {GestionNouveauBatimentBtn("archer"); });
+
+        manager = GetComponent<RTSManager>();
     }
 
 
@@ -298,8 +300,12 @@ public class Construction : MonoBehaviour
     // GESTION DE LA CONSTRUCTION DES BÂTIMENTS
     IEnumerator GestionConstruction(GameObject objet)
     {
+
         // On active différents éléments du gameobject
-        objet.AddComponent<Player>().Info = Info;
+        //var newBuilding = objet.AddComponent<Player>();
+        //newBuilding.Info.AccentColor = manager.Players[0].AccentColor;
+        manager.Players[0].activeUnits.Add(objet);
+        
         objet.GetComponent<Collider>().enabled = true;
         objet.gameObject.GetComponent<Outline>().enabled = false;
         // La construction du bâtiment est COMMENCÉE

@@ -8,13 +8,4 @@ public class Player : MonoBehaviour {
 
     public static PlayerSetupDefinition Default;
 
-    void Start()
-    {
-        Info.ActiveUnits.Add(this.gameObject);
-    }
-
-    void OnDestroy()
-    {
-        Info.ActiveUnits.Remove(this.gameObject);
-    }
 }
