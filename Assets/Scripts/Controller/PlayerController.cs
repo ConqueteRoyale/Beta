@@ -14,12 +14,11 @@ public class PlayerController : MonoBehaviour {
     public bool selected = false;
     
 
-
     // Use this for initialization
     void Start() {
 
         agentNav = GetComponent<NavMeshAgent>();
-        
+        int layer_mask = LayerMask.GetMask("Map");
     }
 
     // Update is called once per frame
@@ -32,6 +31,7 @@ public class PlayerController : MonoBehaviour {
 
     public void DeplacementUnite(){
 
+
         if (unit == null)
         {
             return;
@@ -40,8 +40,10 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1) && unit.tag == "Friendly")
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            LayerMask mask = LayerMask.GetMask("Map");
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            if (Physics.Raycast(ray, out hit, 100, mask))
             {
                 agentNav.SetDestination(hit.point);
             }
@@ -51,7 +53,7 @@ public class PlayerController : MonoBehaviour {
             {
                 if(Mathf.Abs(agentNav.velocity.sqrMagnitude) < 0.8f)
                 {
-                    ArreterUnite();
+                    agentNav.enabled = false;
                 }
 
 
@@ -61,9 +63,13 @@ public class PlayerController : MonoBehaviour {
                     if (!agentNav.hasPath || Mathf.Abs(agentNav.velocity.sqrMagnitude) < float.Epsilon)
                     {
 
-                        ArreterUnite();
+                        agentNav.enabled = false;
                     }
                 }
+            }
+            else
+            {
+                agentNav.enabled = true;
             }
         }
     }

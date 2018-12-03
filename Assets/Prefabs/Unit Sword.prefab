@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 54693995567284410}
   - component: {fileID: 136924998329573876}
   - component: {fileID: 195583203089912782}
+  - component: {fileID: 208782033840432266}
   - component: {fileID: 114964002129843786}
   - component: {fileID: 114960566966587968}
   - component: {fileID: 114781168890874378}
@@ -1553,7 +1554,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1655280495027726}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 15.967731, y: 0.75566506, z: -17.529186}
+  m_LocalPosition: {x: -14.309675, y: 0.7122603, z: -16.878223}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4697923777162234}
@@ -2460,7 +2461,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1655280495027726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e07460393de24454fb977d7af31f8b0a, type: 3}
   m_Name: 
@@ -2524,7 +2525,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1655280495027726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72224d937d0396147b72eb5862f02a67, type: 3}
   m_Name: 
@@ -2538,7 +2539,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1655280495027726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1329d3c3018297747918a68931e091aa, type: 3}
   m_Name: 
@@ -2712,3 +2713,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!208 &208782033840432266
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1655280495027726}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.6, y: 0.875, z: 0.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: 0}
+  m_TimeToStationary: 0.5

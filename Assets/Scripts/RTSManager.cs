@@ -49,11 +49,19 @@ public class RTSManager : MonoBehaviour {
             {
                 if ((a.GetComponent<Player>() == null))
                 {
-                    Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
                     var go = a.AddComponent<Player>();
-                    Debug.Log(go);
+                    a.AddComponent<MapBlip>();
+
+                    go.Info = p;
+
+                    if (!p.isAi) 
+                    {
+                        if (Player.Default == null) Player.Default = p;
+                    }
                 }
             }
         }
 	}
+
+
 }

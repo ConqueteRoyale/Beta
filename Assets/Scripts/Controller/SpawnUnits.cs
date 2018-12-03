@@ -9,10 +9,14 @@ public class SpawnUnits : MonoBehaviour {
     public float DelaiSpawn;
     public GameObject lePointDuSpawn;
 
+    RTSManager manager;
+
     // Use this for initialization
     void Start() {
         // La fonction se repete a chaque 5 secondes et l'on instantie une nouvelle unite
         InvokeRepeating("spawnUnite", DelaiSpawn, spawnTime);
+
+        manager = GameObject.FindGameObjectWithTag("RTSManager").GetComponent<RTSManager>();
     }
 
     // Update is called once per frame
@@ -23,8 +27,9 @@ public class SpawnUnits : MonoBehaviour {
     void spawnUnite() {
 
         // On instancie nos unites et on les places dans l'environnement
-        Instantiate(uneUnite, lePointDuSpawn.transform.position, Quaternion.identity);
-
+        var unit = Instantiate(uneUnite, lePointDuSpawn.transform.position, Quaternion.identity);
+        manager.Players[0].activeUnits.Add(unit);
         VariablesGlobales.effectifTotal_joueur_01++;
+        
     }
 }

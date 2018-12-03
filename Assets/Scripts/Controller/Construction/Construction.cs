@@ -43,7 +43,7 @@ public class Construction : MonoBehaviour
     // Bool indiquant si le bâtiment est constructible ou pas
     public bool isPlaceable;
 
-    //
+    //Manager du jeu 
     RTSManager manager;
 
 
@@ -302,8 +302,6 @@ public class Construction : MonoBehaviour
     {
 
         // On active différents éléments du gameobject
-        //var newBuilding = objet.AddComponent<Player>();
-        //newBuilding.Info.AccentColor = manager.Players[0].AccentColor;
         manager.Players[0].activeUnits.Add(objet);
         
         objet.GetComponent<Collider>().enabled = true;
